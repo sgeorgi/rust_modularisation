@@ -5,6 +5,8 @@ mod numerology;
 mod tests {
     use crate::georgi::say_hi;
     use crate::numerology;
+    use crate::numerology::age;
+    use crate::numerology::age::Person;
 
     #[test]
     fn it_works() {
@@ -23,6 +25,7 @@ mod tests {
 
     #[test]
     fn age_works() {
-        assert_eq!(numerology::age::sebastian(), 39)
+        let sebastian: Person = Person { age: 39 };
+        assert_eq!(age::age_of(&sebastian), 39)
     }
 }
