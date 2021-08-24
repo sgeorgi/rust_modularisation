@@ -1,12 +1,10 @@
 pub mod georgi;
-mod numerology;
+pub mod numerology;
 
 #[cfg(test)]
 mod tests {
     use crate::georgi::say_hi;
-    use crate::numerology;
-    use crate::numerology::age;
-    use crate::numerology::age::Person;
+    use crate::numerology::magic_number;
 
     #[test]
     fn it_works() {
@@ -20,12 +18,6 @@ mod tests {
 
     #[test]
     fn magic_number_works() {
-        assert_eq!(numerology::magic_number(), 42)
-    }
-
-    #[test]
-    fn age_works() {
-        let sebastian: Person = Person { age: 39 };
-        assert_eq!(age::age_of(&sebastian), 39)
+        assert_eq!(magic_number(), 42)
     }
 }
