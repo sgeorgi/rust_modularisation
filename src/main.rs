@@ -14,4 +14,13 @@ fn main() {
     println!("Hilda is {} years old", hilda.age());
     println!("And the answer to everything else is: {}", magic_number());
 
+    let mut v = vec![0, 10, 20, 30, 40, 50];
+    v.reverse();
+    for i in &v { println!("{}", i); };
+
+    let mut s1 = String::from("foo");
+    let s2 = "bar";
+    s1.push_str(s2);
+    let summary = format!("1: {}, 2: {}", s1, s2);
+    println!("Strings are:\n{}", summary);
 }
